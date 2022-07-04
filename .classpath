@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="2022.02.26/src"/>
+	<classpathentry kind="src" path="2022.02.27/src"/>
+	<classpathentry kind="src" path="hansu/src"/>
+	<classpathentry kind="output" path="2022.02.26/out/production/math"/>
+</classpath>
