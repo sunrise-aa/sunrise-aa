@@ -1,0 +1,229 @@
+
+
+
+----------------------------------------------------------------------------------------------
+public class NotificationsFragment extends Fragment implements View.OnClickListener {
+}
+继承的是fragment，能打开，但是点击没有反应呢
+如果继承了AppCompatActivity，可以重写，就是闪退
+----------------------------------------------------------------------------------------------
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_notifications);
+        btn1 = (Button) findViewById(R.id.btn_dialog_one);
+        btn2 = (Button) findViewById(R.id.btn_dialog_two);
+        btn3 = (Button) findViewById(R.id.btn_dialog_three);
+        btn4 = (Button) findViewById(R.id.btn_dialog_four);
+
+        btn1.setOnClickListener(this);
+        btn2.setOnClickListener(this);
+        btn3.setOnClickListener(this);
+        btn4.setOnClickListener(this);
+
+
+
+package com.example.homeworklearn.ui.notifications;
+
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
+import com.example.homeworklearn.R;
+
+public class NotificationsFragment extends Fragment implements View.OnClickListener {
+    //*----------------------------------------------------------------------------------------------------------------*//*
+    //*----------------------------------------------------------------------------------------------------------------*//*
+    //*----------------------------------------------------------------------------------------------------------------*//*
+    private NotificationsViewModel notificationsViewModel;
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        notificationsViewModel =
+                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        return root;
+    }
+    //*----------------------------------------------------------------------------------------------------------------*//*
+    //*----------------------------------------------------------------------------------------------------------------*//*
+    //*----------------------------------------------------------------------------------------------------------------*//*
+
+    private Button btn1, btn2, btn3, btn4;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_notifications);
+        btn1 = (Button) findViewById(R.id.btn_dialog_one);
+        btn2 = (Button) findViewById(R.id.btn_dialog_two);
+        btn3 = (Button) findViewById(R.id.btn_dialog_three);
+        btn4 = (Button) findViewById(R.id.btn_dialog_four);
+
+        btn1.setOnClickListener(this);
+        btn2.setOnClickListener(this);
+        btn3.setOnClickListener(this);
+        btn4.setOnClickListener(this);
+
+
+
+        /*onCreate里面加上
+ Button    bt3=（Button）findViewById(R.id.bt3);
+bt3.setOnClickListener(this);
+就可以了。
+重写onclick需要 onCreate里再调用setOnClickListener这个方法然后传入this。
+button对象.setOnClickListener(this);
+*/
+    }
+
+
+
+
+
+
+
+
+
+
+
+    //*----------------------------------------------------------------------------------------------------------------*//*
+    //*----------------------------------------------------------------------------------------------------------------*//*
+    //*----------------------------------------------------------------------------------------------------------------*//*
+    final String[] lang = new String[]{"no.1", "no.2", "no.3", "no.4", "no.5", "no.6"};//显示列表对话框two
+    final String[] city = new String[]{"北京", "上海", "广州", "深圳", "杭州", "成都", "厦门"};//单选列表对话框three
+    final String[] fav = new String[]{"喜剧", "悲剧", "爱情", "动作"};//复选列表对话框four
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+
+            case R.id.btn_dialog_one:
+                AlertDialog.Builder builder_btn_dialog_one = new AlertDialog.Builder(getContext());
+                builder_btn_dialog_one.setTitle("一个非常重要的信息")
+                        .setIcon(R.drawable.ic_dashboard_black_24dp)
+                        .setMessage("可以给我一键三联吗？")
+                        //点击对话框以外的区域是否让对话框消失
+                        .setCancelable(true)
+                        .setPositiveButton("可以", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                        .setNegativeButton("不可以", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                        .setNeutralButton("忽略", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+
+                AlertDialog alertDialog_btn_dialog_one = builder_btn_dialog_one.create();
+                //显示对话框
+                alertDialog_btn_dialog_one.show();
+                break;
+
+            //*----------------------------------------------------------------------------------------------------------------*//*
+            //*----------------------------------------------------------------------------------------------------------------*//*
+            //*----------------------------------------------------------------------------------------------------------------*//*
+            case R.id.btn_dialog_two:// 显示列表对话框
+                AlertDialog.Builder builder_btn_dialog_two = new AlertDialog.Builder(getContext());
+                builder_btn_dialog_two.setTitle("显示普通列表对话框");
+                builder_btn_dialog_two.setIcon(R.drawable.ic_launcher_foreground);
+                //点击对话框以外的区域是否让对话框消失
+                builder_btn_dialog_two.setCancelable(true);
+                builder_btn_dialog_two.setItems(lang, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getContext(), "你选择了" + lang[which], Toast.LENGTH_SHORT).show();
+                    }
+                });
+                AlertDialog alertDialog_btn_dialog_two = builder_btn_dialog_two.create();
+                alertDialog_btn_dialog_two.show();
+                break;
+
+            //*----------------------------------------------------------------------------------------------------------------*//*
+            //*----------------------------------------------------------------------------------------------------------------*//*
+            //*----------------------------------------------------------------------------------------------------------------*//*
+
+            case R.id.btn_dialog_three://单选列表对话框
+                AlertDialog.Builder builder_btn_dialog_three = new AlertDialog.Builder(getContext());
+                builder_btn_dialog_three.setTitle("这是单选列表对话");
+                builder_btn_dialog_three.setIcon(R.drawable.ic_home_black_24dp);
+                builder_btn_dialog_three.setCancelable(true);
+                builder_btn_dialog_three.setSingleChoiceItems(city, 0, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getContext(), city[which], Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alertDialog_btn_dialog_three = builder_btn_dialog_three.create();
+                alertDialog_btn_dialog_three.show();
+                break;
+
+            //*----------------------------------------------------------------------------------------------------------------*//*
+            //*----------------------------------------------------------------------------------------------------------------*//*
+            //*----------------------------------------------------------------------------------------------------------------*//*
+
+            case R.id.btn_dialog_four:// 显示复选列表对话框
+                final boolean[] selectedbtn_four_selected = {false, false, false, false};
+                AlertDialog.Builder builder_btn_dialog_four = new AlertDialog.Builder(
+                        getContext());
+                builder_btn_dialog_four.setCancelable(true);
+                builder_btn_dialog_four.setTitle("显示复选列表对话框")
+                        .setMultiChoiceItems(fav, selectedbtn_four_selected,
+                                new DialogInterface.OnMultiChoiceClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog,
+                                                        int which, boolean isChecked) {
+                                        selectedbtn_four_selected[which] = isChecked;
+                                    }
+                                })
+                        .setPositiveButton("确定",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog,
+                                                        int which) {
+                                        StringBuffer buffer = new StringBuffer();
+                                        for (int i = 0; i < selectedbtn_four_selected.length; i++) {
+                                            if (selectedbtn_four_selected[i] == true) {
+                                                buffer.append(selectedbtn_four_selected[i]).append(",");
+                                            }
+                                        }
+                                        if (!buffer.toString().trim().equals("")) {
+                                            buffer.deleteCharAt(buffer.length() - 1);
+                                            Toast.makeText(getContext(),
+                                                    buffer.toString(),
+                                                    Toast.LENGTH_LONG).show();
+                                        } else {
+                                            Toast.makeText(getContext(),
+                                                    "你没有选择任何城市！", Toast.LENGTH_LONG)
+                                                    .show();
+                                        }
+                                    }
+                                });
+                AlertDialog alertDialog4 = builder_btn_dialog_four.create();
+                alertDialog4.show();
+                break;
+            //*----------------------------------------------------------------------------------------------------------------*//*
+            //*----------------------------------------------------------------------------------------------------------------*//*
+            //*----------------------------------------------------------------------------------------------------------------*//*
+
+
+        }
+    }
+}

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sidebar_fragment.homework_sidebar_bindservice">
+
+
+    <Button
+        android:id="@+id/homework_sidebar_bindservice_pause"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:text="暂停"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/homework_sidebar_bindservice_start"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:text="播放"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/homework_sidebar_bindservice_lastsong"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="88dp"
+        android:text="上一首"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homework_sidebar_bindservice_nextsong"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="88dp"
+        android:text="下一首"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--
+    
+        <Button
+            android:id="@+id/homework_sidebar_bindservice_fifthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="164dp"
+            android:text="fifth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+        <Button
+            android:id="@+id/homework_sidebar_bindservice_sixthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="164dp"
+            android:text="sixth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+        <Button
+            android:id="@+id/homework_sidebar_bindservice_seventhbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="248dp"
+            android:text="seventh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+        <Button
+            android:id="@+id/homework_sidebar_bindservice_eigthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="248dp"
+            android:text="eigth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    -->
+
+
+<!--    <TextView
+        android:id="@+id/homework_sidebar_bindservice_textview1"
+        android:layout_width="309dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="144dp"
+        android:gravity="center"
+        android:text="homework_sidebar_bindservice"
+        android:textColor="#09BBE8"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/homework_sidebar_bindservice_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/homework_sidebar_bindservice_textview2"
+        android:layout_width="305dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:text="homework_sidebar_bindservice"
+        android:textColor="#37DD10"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/homework_sidebar_bindservice_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <ImageView
+        android:id="@+id/homework_sidebar_bindservice_imageView"
+        android:layout_width="409dp"
+        android:layout_height="350dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/phone129"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

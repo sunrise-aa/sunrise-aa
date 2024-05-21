@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:visibility="visible">
+    <!--
+    android:paddingTop="?attr/actionBarSize"CSS属性 padding-top 是指一个元素在内边距区域（padding area）中上方的高度。
+    内边距（padding）是指一个元素的内容和边框之间的区域。
+    和外边距（margin）不同，内边距（padding）是不允许有负值的。
+    内边距（padding）可以用四个值声明一个元素的四个方向的内边距（paddings），这是一种CSS缩写属性。-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="411dp"
+        android:layout_height="674dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <!--我们再来看布局文件activity_main.xml，
+    这里面有一个fragment标签，这是我们在以往的布局中是没有见过的。
+    这个fragment可以看作是存放Fragment的容器，
+    它引用了一个mobile_navigation.xml资源文件。
+    下面的BottomNavigationView就是底部的tab，
+    它也引用了一个bottom_nav_menu.xml资源文件
+-->
+
+    <!--app:defaultNavHost="true" 的作用是，
+    让 Navigation 处理返回事件，点返回按钮时并不是返回上一个 Activity，
+    而是返回上一个「页面」，上一个「页面」有可能是 Activity，也可能是 Fragment
+-->
+
+<!--    <Button
+        android:id="@+id/many_button_activity_button_first"
+        android:layout_width="259dp"
+        android:layout_height="51dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="many_button_activity_button_first"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/many_button_activity_button_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/many_button_activity_button_second"
+        android:layout_width="268dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="many_button_activity_button_second"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/many_button_activity_button_third"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/many_button_activity_button_third"
+        android:layout_width="259dp"
+        android:layout_height="51dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="many_button_activity_button_third"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

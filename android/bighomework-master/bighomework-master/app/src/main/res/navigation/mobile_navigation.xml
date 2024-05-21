@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+    <!--startDestination用于设置起始Fragment-->
+    <!--其实这里总结一下就是说，
+    我们可以通过配置mobile_navigation.xml文件
+    去给fragment设置跳转参数、进出场动画、隐式跳转-->
+
+    <!--Arguments：跳转到当前页面的时候，需要携带的参数
+1）Name：参数名
+2）Type：参数类型
+3）Default Value：参数默认值
+
+Actions：当前fragment跳转到下一个目标页的动画
+1）ID：每一个action都要指定一个id
+2）From：当前页面
+3）Destination：跳转到哪个页面
+4）Transition：进出场动画
+
+Deep Links：通过当前url的方式拉起当前页面，类似隐式意图拉起Activity
+-->
+
+    <!--最初我们写Android应用，
+    往往都会一个页面就创建一个Activity，
+    然后不同页面之前就使用startActivity进行跳转。
+    后来出现了Fragment，只需要用一个Activity承载多个Fragment，
+    然后通过FragmentManager管理Fragment来实现页面切换的效果。
+    但是不知道大家在实际开发过程中，有没有觉得FragmentManager用起来并不是那么方便，
+    如果真的想用一个Activtiy多个Fragment来完成整个APP开发，
+    还是感觉不是很方便，Navigation的出现就是为了解决这个问题。
+    下面是官网对Navigation的功能概述
+
+    处理 Fragment 事务（代替FragmentManager）
+默认情况下，正确处理往返操作（管理页面堆栈）
+为动画和转换提供标准化资源（页面切换动画）
+实现和处理深层链接（类似Activity的隐式意图）
+包括导航界面模式，用户只需完成极少的额外工作（封装组件，如抽屉式导航栏和底部导航，方便快速开发）
+Safe Args — 可在目标之间导航和传递数据时提供类型安全的 Gradle 插件（安全的页面跳转传参方式）
+ViewModel 支持 - 您可以将 ViewModel 的范围限定为导航图，以在图表的目标之间共享与界面相关的数据（其他Jetpack组件—ViewModel支持）
+看完上面这些功能，我们就对Navigation的作用大概有一个了解了
+
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+-->
+
+    <!--layout里面的fragment.xml就是布局文件，类似前端显示控件
+    activity就是一个又一个活动事件，可以跳转到另一个xml里面
+    fragment就是对控件进行设计功能-->
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.homeworklearn.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.homeworklearn.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.homeworklearn.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.example.homeworklearn.ui.message.MessageFragment"
+        android:label="@string/title_message"
+        tools:layout="@layout/sidebar_main_activity">
+
+    </fragment>
+
+</navigation>
+
+    <!--id，自己定义的
+    name，要建立一个文件夹，里面有fragment
+    label，在strings.xml里面定义好
+    layout，在layout里面有定义好布局文件-->

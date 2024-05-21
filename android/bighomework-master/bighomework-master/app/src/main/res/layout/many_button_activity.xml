@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".many_buttonActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="446dp"
+        android:layout_height="740dp"
+        android:src="@drawable/phone119"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.555" />
+
+
+    <!--+++++++++++++++++++备份后续用++++++++++++++++++++++++++++-->
+
+
+    <TextView
+        android:id="@+id/usr"
+        android:layout_width="276dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="68dp"
+        android:textColor="@color/teal_200"
+        android:textSize="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"></TextView>
+
+    <TextView
+        android:id="@+id/pwd"
+        android:layout_width="278dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="148dp"
+        android:textColor="@color/teal_200"
+
+        android:textSize="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"></TextView>
+
+    <TextView
+        android:id="@+id/yzm"
+        android:layout_width="277dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="232dp"
+        android:textColor="@color/teal_200"
+
+        android:textSize="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"></TextView>
+
+
+    <Button
+        android:id="@+id/button_many_button_activity_browser"
+        android:layout_width="110dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="112dp"
+        android:background="#4F06FA"
+        android:hint="搜索B站"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_many_button_activity_open_firstapp" />
+
+    <Button
+        android:id="@+id/button_many_button_activity_open_firstapp"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="32dp"
+        android:background="#4F06FA"
+        android:hint="打开信息"
+        app:layout_constraintBottom_toTopOf="@+id/button_many_button_activity_open_wechat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_many_button_activity_open_secondapp"
+        android:layout_width="116dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="360dp"
+        android:background="#4F06FA"
+        android:hint="打开设置"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yanzhengma"
+        app:layout_constraintVertical_bias="0.287" />
+
+    <Button
+        android:id="@+id/button_many_button_activity_open_wechat"
+        android:layout_width="115dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="176dp"
+        android:background="#4F06FA"
+        android:hint="打开微信"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yanzhengma"
+        app:layout_constraintVertical_bias="0.287" />
+
+    <Button
+        android:id="@+id/button_many_button_activity_open_zhifubao"
+        android:layout_width="124dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="272dp"
+        android:background="#4F06FA"
+        android:hint="打开支付宝"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yanzhengma"
+        app:layout_constraintVertical_bias="0.287" />
+
+    <Button
+        android:id="@+id/button_many_button_activity_open_eleme"
+        android:layout_width="122dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="96dp"
+        android:background="#4F06FA"
+        android:hint="打开饿了么"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yanzhengma"
+        app:layout_constraintVertical_bias="0.287" />
+
+    <Button
+        android:id="@+id/button_many_button_activity_open_meituanwaimai"
+        android:layout_width="126dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="184dp"
+        android:background="#4F06FA"
+        android:hint="打开美团外卖"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yanzhengma"
+        app:layout_constraintVertical_bias="0.287" />
+
+    <Button
+        android:id="@+id/button_many_button_activity_open_baiduditu"
+        android:layout_width="125dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="360dp"
+        android:background="#4F06FA"
+        android:hint="打开百度地图"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yanzhengma"
+        app:layout_constraintVertical_bias="0.287" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

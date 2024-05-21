@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sidebar_fragment.homework_sidebar_system_broadcast_receiver">
+
+<!--
+    <Button
+        android:id="@+id/homework_sidebar_system_broadcast_receiver_firstbutton"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:text="first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/homework_sidebar_system_broadcast_receiver_secondbutton"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:text="second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/homework_sidebar_system_broadcast_receiver_thirdbutton"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="88dp"
+        android:text="third"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homework_sidebar_system_broadcast_receiver_fourthbutton"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="88dp"
+        android:text="fourth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--
+    
+        <Button
+            android:id="@+id/homework_sidebar_system_broadcast_receiver_fifthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="164dp"
+            android:text="fifth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+        <Button
+            android:id="@+id/homework_sidebar_system_broadcast_receiver_sixthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="164dp"
+            android:text="sixth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+        <Button
+            android:id="@+id/homework_sidebar_system_broadcast_receiver_seventhbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="248dp"
+            android:text="seventh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+        <Button
+            android:id="@+id/homework_sidebar_system_broadcast_receiver_eigthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="248dp"
+            android:text="eigth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    -->
+
+<!--
+    <TextView
+        android:id="@+id/homework_sidebar_system_broadcast_receiver_textview1"
+        android:layout_width="309dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="132dp"
+        android:gravity="center"
+        android:text="homework_sidebar_system_broadcast_receiver"
+        android:textColor="#09BBE8"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/homework_sidebar_system_broadcast_receiver_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/homework_sidebar_system_broadcast_receiver_textview2"
+        android:layout_width="312dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="homework_sidebar_system_broadcast_receiver"
+        android:textColor="#37DD10"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/homework_sidebar_system_broadcast_receiver_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <ImageView
+        android:id="@+id/homework_sidebar_system_broadcast_receiver_imageView"
+        android:layout_width="397dp"
+        android:layout_height="396dp"
+        android:src="@drawable/phone112"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

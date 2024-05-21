@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="910dp"
+        android:layout_height="1358dp"
+        android:src="@drawable/backgroundsecond"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_dialog_seven_dynamic_sendbroadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="发送动态广播"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_five" />
+
+    <Button
+        android:id="@+id/btn_dialog_seven_dynamic_register_broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:text="注册动态广播接收器"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_five" />
+
+    <Button
+        android:id="@+id/btn_dialog_seven_dynamic_unregister_broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="212dp"
+        android:text="取消注册动态广播接收器"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_five" />
+
+    <TextView
+        android:id="@+id/btn_dialog_seven_staticbroadcastTO_textview"
+        android:layout_width="158dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="静态广播初始化"
+        android:textAllCaps="false"
+        android:textColor="#F10A0A"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_five" />
+
+    <TextView
+        android:id="@+id/btn_dialog_seven_dynamicbroadcastTO_textview"
+        android:layout_width="147dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="136dp"
+        android:gravity="center"
+        android:text="动态广播初始化"
+        android:textAllCaps="false"
+        android:textColor="#F10A0A"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_five" />
+
+    <Button
+        android:id="@+id/btn_dialog_seven_static_broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="静态广播"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_five" />
+
+    <Button
+        android:id="@+id/btn_dialog_one"
+        android:layout_width="158dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="旧版显示对话框"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <!--分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分-->
+
+
+    <Button
+        android:id="@+id/btn_dialog_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="简单对话框"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_dialog_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="普通选择对话框"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_two" />
+
+    <Button
+        android:id="@+id/btn_dialog_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="单选对话框"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_two" />
+
+    <Button
+        android:id="@+id/btn_dialog_five"
+        android:layout_width="143dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:text="多选对话框"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_four" />
+
+    <Button
+        android:id="@+id/btn_dialog_six"
+        android:layout_width="134dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="自定义对话框"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialog_four" />
+    <!--
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="233dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:background="#169ee5"
+            android:gravity="center"
+            android:text="请先登录"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pwd" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="230dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="4dp"
+            android:hint="请输入你的账户名称"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_cancel" />
+
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="227dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:hint="请输入你的密码"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+        <Button
+
+            android:id="@+id/btn_cancel"
+            android:layout_width="76dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="68dp"
+            android:layout_weight="1"
+            android:background="#169ee5"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.326"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dialog_five" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="92dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="68dp"
+            android:layout_weight="1"
+            android:background="#169ee5"
+            android:text="登录"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.657"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dialog_five" />
+
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

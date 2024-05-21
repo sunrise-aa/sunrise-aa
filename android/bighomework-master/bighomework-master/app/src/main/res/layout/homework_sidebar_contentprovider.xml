@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sidebar_fragment.homework_sidebar_contentprovider">
+
+<!--    <Button
+        android:id="@+id/homework_sidebar_contentprovider_firstbutton"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:text="first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/homework_sidebar_contentprovider_secondbutton"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:text="second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/homework_sidebar_contentprovider_thirdbutton"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="88dp"
+        android:text="third"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homework_sidebar_contentprovider_fourthbutton"
+        android:layout_width="128dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="88dp"
+        android:text="fourth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--
+    
+        <Button
+            android:id="@+id/homework_sidebar_contentprovider_fifthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="164dp"
+            android:text="fifth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+        <Button
+            android:id="@+id/homework_sidebar_contentprovider_sixthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="164dp"
+            android:text="sixth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+        <Button
+            android:id="@+id/homework_sidebar_contentprovider_seventhbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="248dp"
+            android:text="seventh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    
+        <Button
+            android:id="@+id/homework_sidebar_contentprovider_eigthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="248dp"
+            android:text="eigth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    -->
+
+<!--
+    <TextView
+        android:id="@+id/homework_sidebar_contentprovider_textview1"
+        android:layout_width="303dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="144dp"
+        android:gravity="center"
+        android:text="homework_sidebar_contentprovider"
+        android:textColor="#09BBE8"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/homework_sidebar_contentprovider_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/homework_sidebar_contentprovider_textview2"
+        android:layout_width="292dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="homework_sidebar_contentprovider"
+        android:textColor="#37DD10"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/homework_sidebar_contentprovider_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.579"
+        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <TextView
+        android:layout_width="312dp"
+        android:layout_height="96dp"
+        android:gravity="center"
+        android:text="这里是contentprovider"
+        android:textColor="#E809CA"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="137dp" />
+
+    <ImageView
+        android:id="@+id/homework_sidebar_contentprovider_imageView"
+        android:layout_width="381dp"
+        android:layout_height="358dp"
+        android:src="@drawable/phone124"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

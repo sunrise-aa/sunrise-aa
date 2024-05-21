@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sidebar_fragment.homework_sidebar_sharedpreferences_fragment">
+
+
+    <EditText
+        android:id="@+id/sharedpreferences_name"
+        android:layout_width="337dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:hint="请输入你的姓名"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/sharedpreferences_xuehao"
+        android:layout_width="337dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="128dp"
+        android:gravity="center"
+        android:hint="请输入你的密码"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/sharedpreferences_class"
+        android:layout_width="332dp"
+        android:layout_height="57dp"
+        android:gravity="center"
+        android:hint="请输入你的手机号"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharedpreferences_name" />
+
+
+    <Button
+
+        android:id="@+id/btn_duqu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="80dp"
+        android:layout_weight="1"
+        android:background="#169ee5"
+        android:text="读取上一次输入，密码将被加密"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharedpreferences_xuehao" />
+
+    <Button
+
+        android:id="@+id/btn_cancel"
+        android:layout_width="119dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="#169ee5"
+        android:text="取消登录"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharedpreferences_xuehao" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="123dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="#169ee5"
+        android:text="开始登录"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/sharedpreferences_xuehao" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="415dp"
+        android:layout_height="320dp"
+        android:src="@drawable/phone111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!--
+
+        <Button
+            android:id="@+id/fragment_sidebar_second_fifthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="164dp"
+            android:text="fifth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/fragment_sidebar_second_sixthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="164dp"
+            android:text="sixth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/fragment_sidebar_second_seventhbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="248dp"
+            android:text="seventh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/fragment_sidebar_second_eigthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="248dp"
+            android:text="eigth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

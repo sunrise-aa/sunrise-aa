@@ -1,0 +1,53 @@
+/*---------------------------------------------消息框-------------------------------------------------------*/
+    public void open_Old_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "旧版显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void close_Old_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "旧版显示消息框关闭", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void open_simply_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "简单显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void close_simply_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "简单显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void open_common_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "普通显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void close_common_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "普通显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void open_single_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "单选显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void close_single_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "单选显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void open_multiple_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "多选显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void close__multiple_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "多选显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void open_DIY_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "自定义显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void close_DIY_version_of_the_dialog_onButtonClicked(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), "自定义显示消息框开启", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    /*---------------------------------------------消息框-------------------------------------------------------*/
+
+
+

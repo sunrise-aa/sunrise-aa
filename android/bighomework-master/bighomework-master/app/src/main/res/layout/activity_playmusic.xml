@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="446dp"
+        android:layout_height="740dp"
+        android:src="@drawable/backgroundfirst"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <Button
+        android:id="@+id/playvideo_button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:hint="开始"
+        android:onClick="playmusic_start"
+        android:textColor="#EA0909"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="680dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/playvideo_button_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/playvideo_button_start"
+        app:layout_constraintStart_toEndOf="@+id/playvideo_button_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="暂停/继续"
+        android:onClick="playmusic_pause"
+
+        android:textColor="#EA0909"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="680dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/playvideo_button_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:hint="停止"
+        android:onClick="playmusic_stop"
+
+        android:textColor="#EA0909"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+
+    <RadioGroup
+        android:layout_width="409dp"
+        android:layout_height="670dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/RadioButton_music_first"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:text="music:交界-纯音乐"
+            android:textColor="#FFC003"
+            android:textSize="18dp"></RadioButton>
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

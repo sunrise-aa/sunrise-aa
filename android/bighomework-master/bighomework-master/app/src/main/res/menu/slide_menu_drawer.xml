@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!--其中，always 表示总是显示在标题栏，
+    ifRoom 表示控件足够的话显示在标题栏 ，never 表示不显示在标题栏-->
+    <!--这是显示在菜单栏的信息-->
+    <item android:title="   info">
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="@string/menu_home"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/nav_gallery"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="@string/menu_gallery"
+                app:showAsAction="always" />
+
+            <item
+                android:id="@+id/nav_slideshow"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="@string/menu_slideshow"
+                app:showAsAction="always" />
+
+
+        </menu>
+    </item>
+
+
+    <item android:title="   数据存储">
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_homework_sidebar_internal_storage"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="内部存储"
+                app:showAsAction="always"></item>
+            <item
+                android:id="@+id/nav_homework_sidebar_external_storage"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="外部存储"
+                app:showAsAction="always"></item>
+            <item
+                android:id="@+id/nav_homework_sidebar_sharedpreferences"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="sharedpreferences"
+                app:showAsAction="always"></item>
+
+        </menu>
+    </item>
+
+
+    <item android:title="   SQLite数据库">
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_homework_sidebar_basic_sqlite"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="基本操作"
+                app:showAsAction="always"></item>
+            <item
+                android:id="@+id/nav_homework_sidebar_room_ku"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="Room库"
+                app:showAsAction="always"></item>
+
+        </menu>
+    </item>
+
+    <item android:title="   broadcast_receiver">
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_homework_sidebar_system_broadcast_receiver"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="系统广播"
+                app:showAsAction="always"></item>
+            <item
+                android:id="@+id/nav_homework_sidebar_diy_broadcast_receiver"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="自定义广播"
+                app:showAsAction="always"></item>
+
+        </menu>
+    </item>
+
+
+    <item android:title="   service">
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_homework_sidebar_startservice"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="startservice"
+                app:showAsAction="always"></item>
+
+            <item
+                android:id="@+id/nav_homework_sidebar_bindservice"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="bindservice"
+                app:showAsAction="always"></item>
+
+        </menu>
+    </item>
+
+
+    <item android:title="   contentprovider">
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_homework_sidebar_contentprovider"
+                android:icon="@android:drawable/checkbox_off_background"
+                android:title="contentprovider"
+                app:showAsAction="always"></item>
+
+
+        </menu>
+    </item>
+
+
+</menu>

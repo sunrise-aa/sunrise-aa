@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sidebar_fragment.homework_sidebar_internal_storage_fragment">
+
+
+    <Button
+        android:id="@+id/hw_is_internal_storage_write"
+        android:layout_width="145dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="112dp"
+        android:text="内部存储写入"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hw_is_Read_file_content"
+        android:layout_width="151dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="208dp"
+        android:text="读取文件内容"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="430dp"
+        android:layout_height="327dp"
+        android:src="@drawable/phone115"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--
+
+        <Button
+            android:id="@+id/fragment_sidebar_second_fifthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="164dp"
+            android:text="fifth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/fragment_sidebar_second_sixthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="164dp"
+            android:text="sixth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/fragment_sidebar_second_seventhbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="248dp"
+            android:text="seventh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.215"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/fragment_sidebar_second_eigthbutton"
+            android:layout_width="128dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="248dp"
+            android:text="eigth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

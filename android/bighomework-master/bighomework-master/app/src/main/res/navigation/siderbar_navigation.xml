@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/siderbar_navigation"
+    app:startDestination="@id/nav_home">
+
+
+    <!--这是点开侧边栏后显示的各个组件信息-->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.Siderbar_first_fragment"
+        android:label="by:骆发茂,show_first"
+        tools:layout="@layout/fragment_sidebar_first" />
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.Siderbar_second_fragment"
+        android:label="by:骆发茂,show_second"
+        tools:layout="@layout/fragment_sidebar_second" />
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.Siderbar_third_fragment"
+        android:label="by:骆发茂,show_third"
+        tools:layout="@layout/fragment_sidebar_third" />
+
+
+    <fragment
+        android:id="@+id/nav_homework_sidebar_external_storage"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.homework_sidebar_external_storage_fragment"
+        android:label="by:骆发茂,external_storage"
+        tools:layout="@layout/homework_sidebar_external_storage" />
+    <fragment
+        android:id="@+id/nav_homework_sidebar_internal_storage"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.homework_sidebar_internal_storage_fragment"
+        android:label="by:骆发茂,internal_storage"
+        tools:layout="@layout/homework_sidebar_internal_storage" />
+    <fragment
+        android:id="@+id/nav_homework_sidebar_sharedpreferences"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.homework_sidebar_sharedpreferences_fragment"
+        android:label="by:骆发茂,sharedpreferences"
+        tools:layout="@layout/homework_sidebar_sharedpreferences" />
+
+
+    <fragment
+        android:id="@+id/nav_homework_sidebar_basic_sqlite"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.homework_sidebar_basic_sqlite"
+        android:label="by:骆发茂,basic_sqlite"
+        tools:layout="@layout/homework_sidebar_basic_sqlite" />
+    <fragment
+        android:id="@+id/nav_homework_sidebar_room_ku"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.homework_sidebar_room_ku"
+        android:label="by:骆发茂,room_ku"
+        tools:layout="@layout/homework_sidebar_room_ku" />
+    <fragment
+        android:id="@+id/nav_homework_sidebar_system_broadcast_receiver"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.homework_sidebar_system_broadcast_receiver"
+        android:label="by:骆发茂,system_broadcast_receiver"
+        tools:layout="@layout/homework_sidebar_system_broadcast_receiver" />
+
+    <fragment
+        android:id="@+id/nav_homework_sidebar_diy_broadcast_receiver"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.homework_sidebar_diy_broadcast_receiver"
+        android:label="by:骆发茂,diy_broadcast_receiver"
+        tools:layout="@layout/homework_sidebar_diy_broadcast_receiver" />
+
+
+    <fragment
+        android:id="@+id/nav_homework_sidebar_startservice"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.homework_sidebar_startservice"
+        android:label="by:骆发茂,startservice"
+        tools:layout="@layout/homework_sidebar_startservice" />
+
+    <fragment
+        android:id="@+id/nav_homework_sidebar_bindservice"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.homework_sidebar_bindservice"
+        android:label="by:骆发茂,startservice"
+        tools:layout="@layout/homework_sidebar_bindservice" />
+
+    <fragment
+        android:id="@+id/nav_homework_sidebar_contentprovider"
+        android:name="com.example.homeworklearn.ui.sidebar_fragment.homework_sidebar_contentprovider"
+        android:label="by:骆发茂,contentprovider"
+        tools:layout="@layout/homework_sidebar_contentprovider" />
+
+
+
+</navigation>

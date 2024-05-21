@@ -1,0 +1,457 @@
+    <!--startDestination用于设置起始Fragment-->
+    ----------------------------------------------------------------------------------------------------------------
+
+    <!--其实这里总结一下就是说，
+    我们可以通过配置mobile_navigation.xml文件
+    去给fragment设置跳转参数、进出场动画、隐式跳转-->
+    <!--Arguments：跳转到当前页面的时候，需要携带的参数
+1）Name：参数名
+2）Type：参数类型
+3）Default Value：参数默认值
+
+Actions：当前fragment跳转到下一个目标页的动画
+1）ID：每一个action都要指定一个id
+2）From：当前页面
+3）Destination：跳转到哪个页面
+4）Transition：进出场动画
+
+Deep Links：通过当前url的方式拉起当前页面，类似隐式意图拉起Activity
+-->
+----------------------------------------------------------------------------------------------------------------
+    <!--最初我们写Android应用，
+    往往都会一个页面就创建一个Activity，
+    然后不同页面之前就使用startActivity进行跳转。
+    后来出现了Fragment，只需要用一个Activity承载多个Fragment，
+    然后通过FragmentManager管理Fragment来实现页面切换的效果。
+    但是不知道大家在实际开发过程中，有没有觉得FragmentManager用起来并不是那么方便，
+    如果真的想用一个Activtiy多个Fragment来完成整个APP开发，
+    还是感觉不是很方便，Navigation的出现就是为了解决这个问题。
+    下面是官网对Navigation的功能概述
+
+    处理 Fragment 事务（代替FragmentManager）
+默认情况下，正确处理往返操作（管理页面堆栈）
+为动画和转换提供标准化资源（页面切换动画）
+实现和处理深层链接（类似Activity的隐式意图）
+包括导航界面模式，用户只需完成极少的额外工作（封装组件，如抽屉式导航栏和底部导航，方便快速开发）
+Safe Args — 可在目标之间导航和传递数据时提供类型安全的 Gradle 插件（安全的页面跳转传参方式）
+ViewModel 支持 - 您可以将 ViewModel 的范围限定为导航图，
+以在图表的目标之间共享与界面相关的数据（其他Jetpack组件—ViewModel支持）
+看完上面这些功能，我们就对Navigation的作用大概有一个了解了
+
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+，实际上最主要的作用就是制定统一的标准，来方便开发者管理Fragment
+-->
+----------------------------------------------------------------------------------------------------------------
+
+    <!--layout里面的fragment.xml就是布局文件，类似前端显示控件
+    activity就是一个又一个活动事件，可以跳转到另一个xml里面
+    fragment就是对控件进行设计功能-->
+
+----------------------------------------------------------------------------------------------------------------
+
+2.2.1 LinearLayout(线性布局)
+2.2.2 RelativeLayout(相对布局)
+2.2.3 TableLayout(表格布局)
+2.2.4 FrameLayout(帧布局)
+2.2.5 GridLayout(网格布局)
+2.2.6 AbsoluteLayout(绝对布局)
+----------------------------------------------------------------------------------------------------------------
+
+
+在fragment中继承的是extends Fragment，如果需要对控件进行定义，需要
+        requireView().findViewById(R.id.).setOnClickListener()
+
+而在activity中，继承的是extends AppCompatActivity或者extends Activity
+直接去查找即可findViewById(R.id.)
+然后setOnClickListener()
+----------------------------------------------------------------------------------------------------------------
+
+
+Activity是一个应用程序的组件，他在屏幕上提供了一个区域，允许用户在上面做一些交互性的操作，
+ 比如打电话，照相，发送邮件，或者显示一个地图！Activity可以理解成一个绘制用户界面的窗口，
+  而这个窗口可以填满整个屏幕，也可能比屏幕小或者浮动在其他窗口的上方！
+
+从上面这段话，我们可以得到以下信息：
+
+1. Activity用于显示用户界面，用户通过Activity交互完成相关操作 2. 一个App允许有多个Activity
+
+.Activity/ActionBarActivity/AppCompatActivity的区别：
+在开始讲解创建Activity之前要说下这三个的一个区别： Activity就不用说啦，
+后面这两个都是为了低版本兼容而提出的提出来的，
+他们都在v7包下， ActionBarActivity已被废弃，从名字就知道，ActionBar~，
+而在5.0后，被Google弃用了，现在用 ToolBar...而我们现在在Android Studio创建一个Activity默认继承的会是：
+AppCompatActivity! 当然你也可以只写Activity，不过AppCompatActivity给我们提供了一些新的东西而已！ 两个选一个，Just you like~
+-----------------------------------------------------------------------------------------------------------------
+service,持久层！！！！！！！！！！！！！！！！！！！！除非被删掉，都能一直持久化
+
+------------------------------------------------------------------------------------------------------------------
+
+    <!--layout里面的fragment.xml就是布局文件，类似前端显示控件
+    activity就是一个又一个活动事件，可以跳转到另一个xml里面
+    fragment就是对控件进行设计功能-->
+    ---------------------------------------------------------------------------------------------------------------------
+     * onviewcreate,onactivitycreate,oncreateview
+     * <p>
+     * fragment,绑定
+     * xml
+     * 内存呢
+     * view对象
+     * 转化对象
+     * oncreateview
+     * xml========view对象
+     * framgnet绑定
+     * 执行完后，root，返回view
+     * view创建后，再进行操作
+     * 绑定之后再操作，不然就是空的
+     * <p>
+     * 在create之后再进行绑定
+     * 不分先后，相同的，对activities
+     * 对view，看谁先加载，对内对外
+
+
+
+         ---------------------------------------------------------------------------------------------------------------------
+
+      fragment
+
+     不同点
+
+     在安卓开发中Activity与fragment也有许许多多的不同，
+     首先我们来介绍一下Activity这个控件，我们首先来看一下Activity代表的是整个页面，
+     就像我们在APP中的一整个页面。当中我们在layout中每创建一个Activity都需要在AndroidMainfest中去注册
+     这样我们在运行的时候才能将这个页面显示出来，否则就会报错。
+
+         ---------------------------------------------------------------------------------------------------------------------
+FragmentActivity和Activity的区别
+
+
+         Fragment这个组件是最常见的页面组件之一。他在很多软件中都有应用，例如我们最常用的微信，
+         上面的可以变化的页面就是我们的Fragment组件，当利用Fragment组件时我们不需要到AndroidMainfest中去注册，就只是做好后台就可以了。
+
+Fragment是Android 3.0以后的东西，为了在低版本中使用Fragment就要用到android-support-v4.jar兼容包,而FragmentActivity就是这个兼容包里面的，
+它提供了操作Fragment的一些方法，其功能跟3.0及以后的版本的Activity的功能一样。
+下面是API中的原话：
+
+FragmentActivity is a special activity provided in the Support Library to handle fragments on system versions older than API level 11. If the lowest system version you support is API level 11 or higher, then you can use a regular Activity.
+
+主要区别如下：
+1、FragmentActivity 继承自Activity，用来解决Android 3.0之前无法使用Fragment的问题，
+所以在使用的时候需要导入android-support-v4.jar兼容包，同时继承 FragmentActivity，这样在Activity中就能嵌入Fragment来实现你想要的布局效果。
+2、当然Android 3.0之后你就可以直接继承自Activity，并且在其中嵌入使用Fragment。
+3、获得FragmentManager的方式也不同
+Android 3.0以下：getSupportFragmentManager()
+Android 3.0以上：getFragmentManager()
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+Activity和Fragment生命周期有哪些？
+activity生命周期为: onCreate()初始化加载布局→onStart()正在启动，
+不在前台在后台→onResume()获取焦点→onPause()停止，界面可见→onStop()停止，界面不可见→onDestroy()销毁
+
+onRestart() 界面重新启动，从不可见变成可见。一般为 onStop()->onRestart()->onStart();
+
+
+fragment从创建倒销毁整个生命周期依次为：onAttach()→onCreate()→onCreateView()→onActivityCreated()→onStart()→onResume()→onPause()→onStop()→onDestroyView()→onDestroy()→onDetach()
+
+与activity不同的方法有——onAttach():当Fragment和Activity建立关联的时候调用；
+onCreateView():当Fragment创建视图调用；
+onActivityCreated:与Fragment相关联的Activity完成onCreate()之后调用；
+onDestoryView():在Fragment中的布局被移除时调用；
+onDetach():当Fragment和Activity解除关联时调用；
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+一、Activity、 Window、 View 三者的差别
+
+众所周知，Activity是应用程序的载体，提供用户在其上创建界面的功能，
+Activity中展示视图元素需用通过Window来实现，而Window相当于一个容器，
+里面“盛放”着很多View，View主要是可以绘制自己想要的显示内容是一个最基本的UI组成。
+
+用很多大佬简单明了的一句话表示就是，
+Activity像一个工匠（控制单元），Window像窗户（承载模型），View像窗花（显示视图）。
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+Fragment和Activity的交互
+　　一个Fragment的实例总是和包含它的Activity直接相关。
+
+　　fragment可以通过getActivity() 方法来获得Activity的实例，然后就可以调用一些例如findViewById()之类的方法。
+
+　　如：
+
+　　View listView = getActivity().findViewById(R.id.list);
+
+　　但是注意调用getActivity()时，fragment必须和activity关联（attached to an activity），否则将会返回一个null。
+
+
+
+　　相似的，activity也可以获得一个fragment的引用，从而调用fragment中的方法。
+
+　　获得fragment的引用要用FragmentManager，之后可以调用findFragmentById() 或者 findFragmentByTag().
+
+　　比如：
+
+　　ExampleFragment fragment = (ExampleFragment) getFragmentManager().findFragmentById(R.id.example_fragment);
+
+-----------------------------------------------------------------------------------------------------------------------------
+Fragment的设计初衷便是为了将布局与代码逻辑一起封装，想想下面这个场景：
+
+一款APP包含界面A和界面B，界面B为界面A的详情。你需要同时适配手机和平板，手机版的操作逻辑为A跳转到B，而平板的布局为AB同一界面，A在左边，B在右边。
+
+这时候最好的方法将A、B都封装为Fragment，手机中直接使用Fragment，平板中设置两个Fragment的布局即可。
+-----------------------------------------------------------------------------------------------------------------------------
+
+首先这里不准备论述fragment和activity的具体定义，用法和概念。只是建立在了解这两个东西的基础上谈区别。
+
+在理解二者之间的区别的时候，只需要不断的问自己一个问题，就是fragment能做到的Activity能做到吗?可以做到的话没问题，
+不可以做到的话，为什么不可以呢?这个为什么就是区别。先来看两者的生命周期，这个不必多说。
+
+
+
+1.fragment显得更加灵活。可以直接在XML文件中添加<fragment/>,Activity则不能。
+
+eg：
+
+<fragment
+
+Android:id="@+id/left_fragment"
+
+Android:name="com.example.fragmenttest.LeftFragment"
+
+…
+
+…
+
+…/>
+
+<fragment
+
+Android:id="@+id/right_fragment"
+
+Android:name="com.example.fragmenttest.rightFragment"
+
+…
+
+…
+
+…/>
+
+2.可以在一个界面上灵活的替换一部分页面，活动不可以，做不到。
+
+替换的时候注意要将这个fragment放在返回栈上。
+
+3.fragment和Activity之间的通信：(也就是控件的相互操控)
+
+fragment控制fragment：得到一个Activity，然后通过这个Activity的getFragmentManager()获得该Fragment的实例。
+
+fragment控制Activity：这个很简单。每个Fragment都有getActivity()得到一个活动。MainActivity activity=getActivity();
+
+Activity控制fragment：xxxFragment xxx=getFragmentManager().findFragmentById();
+
+Activity控制Activity：这个显然是通过Intent活动之间的通信完成。别忘了在被打开的活动中创建Intent和得到Intent一起进行，写个静态的actionStart()。
+
+4.fragment和Activity中控件的加载
+
+Fragment的载入是通过OnCreateView的时候通过inflater.inflate()加载布局，然后通过修改main.xml，在main.xml上增加注册fragment标签，然后通过android：name来载入你已经通过inflater加载的隐藏布局。
+
+有几个关键点：fragment是通过inflater加载View然后在main.xml中注册得到的。当然如果你可以在fragment中得到View那就可以通过View.findViewId()来操控fragment上的具体控件。
+
+5.动态加载不同的fragment：
+
+首先，监听你的按钮。
+
+1.创建待加载fragment的实例
+
+2.得到FragmentManager，在活动中可以直接调用getFragmentManager()方法获得。
+
+3.调用Manager的BeginTansation()
+
+4.用replace()改变不同的Fragment
+
+5.commit事务。
+
+6.碎片的生命周期
+-----------------------------------------------------------------------------------------------------------------------------
+
+1.       为什么要引入Fragment？     
+
+    引入Fragment是出于大屏幕的平板电脑的需要，使用Fragment可以在同一个activity中显示两个或多个Fragment，
+这些Fragment都属于一个Activity。Fragment必须被“嵌入”到activity中使用，因此Fragment虽然有自己的生命周期，
+但它的生命周期会受到所在的Activity的限制。
+
+
+图 Fragment的生命周期
+
+2.       Activity与Fragment生命周期的关系？
+
+Activity的OnCreate()
+
+|
+
+Fragment的onAttach(Activityactivity)，其中Activity就是它所依附的Activity
+
+|
+
+Fragment的onCreate()
+
+|
+
+Fragment的onCreateView(LayoutInflaterinflater, ViewGroup container,
+
+                            BundlesavedInstanceState)
+
+|
+
+Fragment的onActivityCreated()
+
+|
+
+Activity的onResume()
+
+|
+
+Fragment的onResume()
+
+|
+
+Fragment的onPause()
+
+|
+
+Activity的onPause()
+
+|
+
+Fragment的onDestroy()
+
+|
+
+Fragment的onDetach()
+
+|
+
+Activity的onDestroy()
+
+ 
+-----------------------------------------------------------------------------------------------------------------------------
+
+1. 当你有一个activity，想让这个activity根据事件响应可以对应不同的界面时，就可以创建几个fragment，将fragment绑定到该activity
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+1.Fragment生命周期
+   onAttach()->onCreate()-> onCreateView()->onActivityCreated()->onStart()-                       >onResume()->onPause()->onStop()->onDestroyView()->onDestroy() ->
+   onDetach()
+
+   其中和Activity有不少名称相同作用相似的方法，而不同的方法有:
+   onAttach()：当Fragment和Activity建立关联时调用
+   onCreateView()：当Fragment创建视图时调用
+   onActivityCreated()：当与Fragment相关联的Activity完成onCreate()之后调用
+   onDestroyView()：在Fragment中的布局被移除时调用
+   onDetach()：当Fragment和Activity解除关联时调用
+
+2.Fragment使用场景
+   非常经典的例子，即用两个Fragment封装两个界面模块，这样只使一套代码就能适配两种设备，达到两种界面效果；单一场景切换时使用Fragment更轻量化，如ViewPager和Fragment搭配使用。
+
+3.Fragment和Activity的关系
+    正如Fragment的名字“碎片”，它的出现是为了解决Android碎片化 ，它可作为Activity界面的组成部分，可在Activity运行中实现动态地加入、移除和交换。
+    一个Activity中可同时出现多个Fragment，一个Fragment也可在多个Activity中使用。
+另外，Activity的FragmentManager负责调用队列中Fragment的生命周期方法，只要Fragment的状态与Activity的状态保持了同步，宿主Activity的FragmentManager便会继续调用其他生命周期方法以继续保持Fragment与Activity的状态一致。
+
+4.Fragment和Activity的异同
+   同：Activity和Fragment的相似点在于，它们都可包含布局、可有自己的生命周期，Fragment可看似迷你活动。
+   异：不同点是，由于Fragment是依附在Activity上的，多了些和宿主Activity相关的生命周期方法，如onAttach()、onActivityCreated()、onDetach()；另外，Fragment的生命周期方法是由宿主Activity而不是操作系统调用的，Activity中生命周期方法都是protected，而Fragment都是public，也能印证了这一点，因为Activity需要调用Fragment那些方法并管理它。
+-----------------------------------------------------------------------------------------------------------------------------
+match_parent:扩充为上一个父级的内容，全部包含（匹配父空间）
+wrap_parent:有多少元素就包含多少大小，
+width,height
+一般不用px，用dp，碎片化严重，多种屏幕大小，难以适配
+padding：内边距，里面距离边距有多少距离
+margin：外边距，距离外部有多少距离
+默认是水平排列，
+layout_weight将剩余的部分按值平分
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+relativelayout常用的属性
+layout_toleftof,参见在谁的左边
+layout_torightof，参见在谁的右边
+layout_allgnbottom，和谁的底部
+layout_alignparentbottom，和谁的父部空间
+layout_below和谁的底部
+
+-----------------------------------------------------------------------------------------------------------------------------
+Android广播有两个很重要的要素：
+
+   1 广播 - 用于发送广播
+
+         有序广播  -  被广播接收器接收后，可被终止，无法往下继续传达。         典型代表：短信广播
+
+         普通广播  -  发送至每一个已经注册（订阅）的广播接收器，无法被终止。 典型代表：开机启动广播
+
+   2 广播接收器 - 用于订阅广播后接收广播
+
+         静态注册广播 - 在AndroidManifest.xml中设置，程序不用启动亦可接收。 典型代表：很多开机启动的APP，都是接收开机启动广播带起服务的。
+
+         动态注册广播 - 代码中注册广播，程序未启动时，无法接收广播。典型代表：Go短信，将Go短信强行停止，Go短信无法接收短信。
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------

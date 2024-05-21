@@ -1,0 +1,129 @@
+
+
+
+    /*---------------------------------------------对话框-------------------------------------------------------*/
+
+
+    /*-----------------------------------简单对话框-------------------------------------------------------*/
+
+    public class SimpleDialogFragment extends DialogFragment {
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the Builder class for convenient dialog construction
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+            builder.setTitle("新版对话框")
+                    .setMessage("新版对话框的内容文本！")
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            // User confirmation Click
+                            Toast.makeText(getActivity().getApplicationContext(),"你点击了确定",Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            Toast.makeText(getActivity().getApplicationContext(),"你点击了取消",Toast.LENGTH_SHORT).show();
+                            // User cancelled the dialog
+                        }
+                    });
+            // Create the AlertDialog object and return it
+            return builder.create();
+        }
+    }
+
+    public void onSimpleButtonClicked(View view){
+        SimpleDialogFragment simpleDialogFragment = new SimpleDialogFragment();
+        simpleDialogFragment.show(getsupportFragmentManager(),"simple");
+    }
+    /*-------------------------------------简单对话框-------------------------------------------------------*/
+
+    /*-------------------------------------选择对话框-------------------------------------------------------*/
+    public class ChoiceDialogFragment extends DialogFragment{
+        private String[] genders = new String[]{"man","woman"};
+        private ChoiceDialogFragment.NotifyDialogListener listener;
+
+        public interface NotifyDialogListener{
+            public void onDialogPositiveClicked(String gender);
+        }
+
+        public void setListener(ChoiceDialogFragment.NotifyDialogListener listener){
+            this.listener = listener;
+        }
+
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("选择对话框")
+                .setItems(genders, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Listener.onDialogPositiveClicked(genders[which]);
+                        // The 'which' argument contains the index position
+                        // of the selected item
+                    }
+                });
+        return builder.create();
+    }
+    }
+
+    public void onChoiceButtonClicked(View view){
+        ChoiceDialogFragment dialog = new ChoiceDialogFragment();
+        dialog.setListener(new ChoiceDialogFragment().NotifyDialogListener(){
+            @Override
+                    public void onDialogPositiveClikcked(String gender){
+                Toast.makeText(getApplicationContext(),"你选择了",Toast.LENGTH_SHORT).show();
+            }
+        });
+        dialog.show(getSupportFragmentManager(),"choice");
+    }
+    /*-------------------------------------选择对话框-------------------------------------------------------*/
+
+
+
+    /*-------------------------------------单选对话框-------------------------------------------------------*/
+    /*setSingleChoiceItems函数，参数1：字符串数组；参数2：默认选择的序号；参数3：选择时的listener
+     */
+    @Override
+    public Dialog onCreateDialog(Bundle saveInstanceState) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("单选对话框")
+                .setSingleChoiceItems(genders, 0, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        gender = genders[which];
+                    }
+                })
+    }
+    /*-------------------------------------单选对话框-------------------------------------------------------*/
+
+
+
+    /*-------------------------------------多选对话框-------------------------------------------------------*/
+    /*setMultiChoiceItems函数，参数1：字符串数组；参数2：boolean数组，表示是否默认勾选，传null表示一个都不勾选；参数3：选中时的listener
+     */
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("多选对话框")
+                .setMultiChoiceItems(genders, null, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                        if(isChecked){
+                            selectedItems.add(genders[which]);
+                        }
+                        else {
+                            selectedItems.remove(genders[which]);
+                        }
+                    }
+                })
+    }
+    /*-------------------------------------多选对话框-------------------------------------------------------*/
+
+
+    /*-------------------------------------自定义对话框-------------------------------------------------------*/
+
+    /*-------------------------------------自定义对话框-------------------------------------------------------*/
+
+
+

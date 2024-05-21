@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_interpolator">
+    <!--translate		实现界面的平移的动画效果
+        fromYDelta		指定动画开始时界面在y轴上的坐标-->
+    <translate
+        android:duration="500"
+        android:fromYDelta="100.0%"
+        android:toYDelta="10.000002%" />
+    <!--alpha			实现界面透明度的渐变动画
+		fromAlpha		指定动画的起始透明度-->
+    <alpha
+        android:duration="500"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+</set>

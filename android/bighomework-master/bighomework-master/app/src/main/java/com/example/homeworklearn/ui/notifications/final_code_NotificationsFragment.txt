@@ -1,0 +1,259 @@
+package com.example.homeworklearn.ui.notifications;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
+import com.example.homeworklearn.R;
+
+public class NotificationsFragment extends Fragment {
+
+    private NotificationsViewModel notificationsViewModel;
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        final String[] lang = new String[]{"骆发茂1：你好哇", "骆发茂2：辛苦你了", "骆发茂3：加油哦", "骆发茂4：要开心", "骆发茂5：谢谢你", "骆发茂6：我很好"};//显示列表对话框two
+        final String[] city = new String[]{"骆发茂1：这是第一个", "骆发茂2：这是第二个", "骆发茂3：这是第三个", "骆发茂4：这是第四个", "骆发茂5：这是第五个", "骆发茂6：这是第六个", "骆发茂7：这是第七个"};//单选列表对话框three
+        final String[] fav = new String[]{"骆发茂喜欢喜剧", "骆发茂喜欢悲剧", "骆发茂喜欢爱情", "骆发茂喜欢动作"};//复选列表对话框four
+        super.onActivityCreated(savedInstanceState);
+        requireView().findViewById(R.id.btn_dialog_one).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("旧版对话框")
+                        .setIcon(R.drawable.ic_dashboard_black_24dp)
+                        .setMessage("这是旧版的对话框，使用简单但是没有自动支持屏幕翻转")
+                        //点击对话框以外的区域是否让对话框消失
+                        .setCancelable(true)
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getContext(), "点击了确定~", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            }
+                        })
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getContext(), "点击了取消~", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            }
+                        })
+                        .setNeutralButton("忽略", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getContext(), "点击了忽略~", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            }
+                        });
+
+                AlertDialog alertDialog = builder.create();
+                //显示对话框
+                alertDialog.show();
+            }
+        });
+
+
+        requireView().findViewById(R.id.btn_dialog_two).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder_two = new AlertDialog.Builder(getContext());
+                builder_two.setTitle("新版对话框")
+                        .setIcon(R.drawable.ic_dashboard_black_24dp)
+                        .setMessage("这是新版的对话框，推荐使用这种方式支持自动支持屏幕翻转")
+                        //点击对话框以外的区域是否让对话框消失
+                        .setCancelable(true)
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getContext(), "点击了确定~", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            }
+                        })
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getContext(), "点击了取消~", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            }
+                        })
+                        .setNeutralButton("忽略", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getContext(), "点击了忽略~", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            }
+                        });
+
+                AlertDialog alertDialog = builder_two.create();
+                //显示对话框
+                alertDialog.show();
+            }
+        });
+
+
+
+
+
+
+
+        requireView().findViewById(R.id.btn_dialog_three).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder_btn_dialog_three = new AlertDialog.Builder(getContext());
+                builder_btn_dialog_three.setTitle("显示普通列表对话框");
+                builder_btn_dialog_three.setIcon(R.drawable.ic_launcher_foreground);
+                //点击对话框以外的区域是否让对话框消失
+                builder_btn_dialog_three.setCancelable(true);
+                builder_btn_dialog_three.setItems(lang, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getContext(), "你选择了" + lang[which], Toast.LENGTH_SHORT).show();
+                    }
+                });
+                AlertDialog alertDialog_btn_dialog_three = builder_btn_dialog_three.create();
+                alertDialog_btn_dialog_three.show();
+            }
+        });
+
+
+
+
+
+        requireView().findViewById(R.id.btn_dialog_four).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder_btn_dialog_four = new AlertDialog.Builder(getContext());
+                builder_btn_dialog_four.setTitle("这是单选列表对话");
+                builder_btn_dialog_four.setIcon(R.drawable.ic_home_black_24dp);
+                builder_btn_dialog_four.setCancelable(true);
+                builder_btn_dialog_four.setSingleChoiceItems(city, 0, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getContext(), city[which], Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alertDialog_btn_dialog_four = builder_btn_dialog_four.create();
+                alertDialog_btn_dialog_four.show();
+            }
+        });
+
+
+
+        requireView().findViewById(R.id.btn_dialog_five).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final boolean[] selectedbtn_five_selected = {false, false, false, false};
+                AlertDialog.Builder builder_btn_dialog_five = new AlertDialog.Builder(
+                        getContext());
+                builder_btn_dialog_five.setCancelable(true);
+                builder_btn_dialog_five.setTitle("显示复选列表对话框")
+                        .setMultiChoiceItems(fav, selectedbtn_five_selected,
+                                new DialogInterface.OnMultiChoiceClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog,
+                                                        int which, boolean isChecked) {
+                                        selectedbtn_five_selected[which] = isChecked;
+                                    }
+                                })
+                        .setPositiveButton("确定",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog,
+                                                        int which) {
+                                        StringBuffer buffer = new StringBuffer();
+                                        for (int i = 0; i < selectedbtn_five_selected.length; i++) {
+                                            if (selectedbtn_five_selected[i] == true) {
+                                                buffer.append(selectedbtn_five_selected[i]).append(",");
+                                            }
+                                        }
+                                        if (!buffer.toString().trim().equals("")) {
+                                            buffer.deleteCharAt(buffer.length() - 1);
+                                            Toast.makeText(getContext(),
+                                                    buffer.toString(),
+                                                    Toast.LENGTH_LONG).show();
+                                        } else {
+                                            Toast.makeText(getContext(),
+                                                    "你没有选择任何选项！", Toast.LENGTH_LONG)
+                                                    .show();
+                                        }
+                                    }
+                                });
+                AlertDialog alertDialog5 = builder_btn_dialog_five.create();
+                alertDialog5.show();
+            }
+        });
+
+
+
+        requireView().findViewById(R.id.btn_dialog_six).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder_six = new AlertDialog.Builder(getContext());
+                builder_six.setCancelable(true);
+                builder_six.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getContext(), "点击了确定~", Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                });
+                builder_six.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getContext(), "点击了取消~", Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                });
+
+
+
+  /*              final AlertDialog dialog_six = builder_six.create();
+                View dialogView = View.inflate(getContext(), R.layout.fragment_notifications, null);
+                //设置对话框布局
+                dialog_six.setView(dialogView);
+                dialog_six.show();
+
+                EditText etName = (EditText) dialogView.findViewById(R.id.et_name);
+                EditText etPwd = (EditText) dialogView.findViewById(R.id.et_pwd);
+                Button btnLogin = (Button) dialogView.findViewById(R.id.btn_login);
+                Button btnCancel = (Button) dialogView.findViewById(R.id.btn_cancel);
+                btnCancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog_six.dismiss();
+                    }
+                });*/
+            }
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        notificationsViewModel =
+                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        return root;
+    }
+
+
+}
